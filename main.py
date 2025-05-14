@@ -8,7 +8,7 @@ def read_transcript(file_path):
 args = parse_arguments()
 transcript_path = args.transcript_file
 def count_word_frequency(text):
-    words = [word for word in text.split() if word.lower() not in WORD_BLACKLIST]
+    words = [word.strip('.,!?').lower() for word in text.split() if word.strip('.,!?').lower() not in WORD_BLACKLIST]
     frequency = {}
     for word in words:
         if word in frequency:
