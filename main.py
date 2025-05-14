@@ -16,14 +16,13 @@ def count_word_frequency(text):
             frequency[word] = 1
     return frequency
 
-min_count = 3
 
 def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
     print("Word Frequency:")
     for word, count in sorted(word_frequency.items(), key=lambda item: item[1], reverse=True):
-        if count > min_count:
+        if count > args.min_count:
             print(f"{word} ({count}): {'#' * count}")
 message = read_transcript(transcript_path)
 print_message(message)
