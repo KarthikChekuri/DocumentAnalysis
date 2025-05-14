@@ -1,5 +1,6 @@
 from arg_parse import parse_arguments
 from constants import WORD_BLACKLIST
+from llm import analyse_transcript
 
 def read_transcript(file_path):
     with open(file_path, 'r') as file:
@@ -27,3 +28,12 @@ def print_message(msg):
             print(f"{word} ({count}): {'#' * count}")
 message = read_transcript(transcript_path)
 print_message(message)
+
+# Analyze the transcript and print the results
+analysis = analyse_transcript(message)
+print("\nTranscript Analysis:")
+print(f"Quick Summary: {analysis.quick_summary}")
+print("Bullet Point Highlights:")
+for highlight in analysis.bullet_point_highlights:
+    print(f"- {highlight}")
+print(f"Sentiment Analysis: {analysis.sentiment_analysis}")
