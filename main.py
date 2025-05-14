@@ -16,7 +16,9 @@ def count_word_frequency(text):
             frequency[word] = 1
     return frequency
 
-def print_message(msg, min_count=3):
+min_count = 3
+
+def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
     print("Word Frequency:")
