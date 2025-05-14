@@ -1,4 +1,5 @@
 from arg_parse import parse_arguments
+from constants import WORD_BLACKLIST
 
 def read_transcript(file_path):
     with open(file_path, 'r') as file:
@@ -7,7 +8,7 @@ def read_transcript(file_path):
 args = parse_arguments()
 transcript_path = args.transcript_file
 def count_word_frequency(text):
-    words = text.split()
+    words = [word for word in text.split() if word.lower() not in WORD_BLACKLIST]
     frequency = {}
     for word in words:
         if word in frequency:
