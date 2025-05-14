@@ -5,12 +5,12 @@ from data_types import TranscriptAnalysis
 
 client = OpenAI()
 
-def analyse_transcript(transcript: str) -> TranscriptAnalysis:
+def analyse_transcript(transcript: str, word_count: dict) -> TranscriptAnalysis:
     completion = client.beta.chat.completions.parse(
         model="gpt-4o-2024-08-06",
         messages=[
             {"role": "system", "content": "You are a helpful assistant analyzing transcripts."},
-            {"role": "user", "content": transcript},
+            {"role": "user", "content": f"{transcript}\n\nWord Count: {word_count}"},
         ],
         response_format=TranscriptAnalysis,
     )

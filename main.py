@@ -30,10 +30,14 @@ message = read_transcript(transcript_path)
 print_message(message)
 
 # Analyze the transcript and print the results
-analysis = analyse_transcript(message)
+word_frequency = count_word_frequency(message)
+analysis = analyse_transcript(message, word_frequency)
 print("\nTranscript Analysis:")
 print(f"Quick Summary: {analysis.quick_summary}")
 print("Bullet Point Highlights:")
 for highlight in analysis.bullet_point_highlights:
     print(f"- {highlight}")
 print(f"Sentiment Analysis: {analysis.sentiment_analysis}")
+print("Keywords:")
+for keyword in analysis.keywords:
+    print(f"- {keyword}")
