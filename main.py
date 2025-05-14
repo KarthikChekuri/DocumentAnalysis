@@ -1,2 +1,3 @@
+message = "hello ai coding"
 for _ in range(10):
-    print("hello ai coding")
+    print(message)
