@@ -3,6 +3,7 @@ def read_transcript(file_path):
         return file.read()
 
 transcript_path = './transcript.txt'
+def print_message(msg):
     print(msg)
 message = read_transcript(transcript_path)
 print_message(message)
