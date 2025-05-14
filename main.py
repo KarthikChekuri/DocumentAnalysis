@@ -16,6 +16,8 @@ def count_word_frequency(text):
 def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
-    print("Word Frequency:", word_frequency)
+    print("Word Frequency:")
+    for word, count in word_frequency.items():
+        print(f"{word}: {'#' * count}")
 message = read_transcript(transcript_path)
 print_message(message)
