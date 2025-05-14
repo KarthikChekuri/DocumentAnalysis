@@ -1,13 +1,10 @@
-import argparse
+from arg_parse import parse_arguments
 
 def read_transcript(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
-parser = argparse.ArgumentParser(description='Process a transcript file.')
-parser.add_argument('transcript_file', type=str, help='Path to the transcript file')
-args = parser.parse_args()
-
+args = parse_arguments()
 transcript_path = args.transcript_file
 def count_word_frequency(text):
     words = text.split()
