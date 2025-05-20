@@ -34,11 +34,10 @@ print_message(message)
 word_frequency = count_word_frequency(message)
 analysis = analyse_transcript(message, word_frequency)
 # Determine the output format and file extension
-output_format = args.output_format
-if output_format == 'json':
+if args.output_format == 'json':
     format_function = format_as_json
     file_extension = 'json'
-elif output_format == 'markdown':
+elif args.output_format == 'markdown':
     format_function = format_as_markdown
     file_extension = 'md'
 else:
