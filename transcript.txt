@@ -1,0 +1,161 @@
+# tactiq.io free youtube transcript
+# AI Agents EVOLVE THEMSELVES! 🔥 New Metagenesis System (Pheromind Update)
+# https://www.youtube.com/watch/pjMYStWtMnE
+
+00:00:01.080 Hi, I got some updates on Fairmind and
+00:00:06.480 these are some things I've been seeing.
+00:00:08.320 You probably been seeing them too if
+00:00:09.679 you've been playing with it. But I'm
+00:00:11.280 going to give you some tips and tricks
+00:00:13.200 and some I came up with a a a new
+00:00:15.759 system. I got a whole new branch out.
+00:00:18.000 You're probably going to want to play
+00:00:19.199 with that one and we'll get to that at
+00:00:21.439 the end. And so, you know, we had some
+00:00:24.960 nasty stuff happening. You know, it was
+00:00:27.039 trying to upload to GitHub. I don't know
+00:00:28.960 if you saw that, but I don't know about
+00:00:30.960 you, but trying to keep 26 agents on the
+00:00:33.680 same GitHub branch, that was a
+00:00:35.840 nightmare. I had like nine plus branches
+00:00:38.399 and they were trying to make more. None
+00:00:40.399 of them knew what the heck they were
+00:00:41.760 doing. It was a nightmare, right? We got
+00:00:44.559 rid of that. That's for a later date,
+00:00:46.800 another time. Not right now, though. And
+00:00:49.840 then I took my pheromone file. I took
+00:00:53.120 out the swarm config and put it in its
+00:00:55.440 own little file so it's not taking up so
+00:00:57.840 much room, right? And so all the math
+00:01:00.480 and stuff is happening in this little
+00:01:02.239 swarm config file in your root
+00:01:04.000 directory. Just put it in the root
+00:01:05.799 directory. And then we got the pheromone
+00:01:08.720 file which now tracks signals and does a
+00:01:10.799 much better job of tracking the
+00:01:13.479 documentation, right? And the
+00:01:15.280 documentation is the ultimate power of
+00:01:17.920 the swarm intelligence itself. As the
+00:01:20.720 AIS look at this file, they see all the
+00:01:22.880 documents, a description of what's in
+00:01:24.640 the documents. So, anytime they want to
+00:01:26.400 reference anything, they can go and this
+00:01:28.240 basically synthesizes a giant giant
+00:01:31.680 context window cuz from just looking at
+00:01:33.680 this one thing, they can access whatever
+00:01:35.520 parts of the context or the memory they
+00:01:38.400 want. And then they can access all of
+00:01:40.479 the different documentations that exist
+00:01:42.960 that have been written thus far. And
+00:01:45.680 this is so important that the new modes
+00:01:48.399 that I set up have an improved ability
+00:01:51.840 of writing documentation to help human
+00:01:56.119 beings debug issues with the code. It's
+00:01:59.439 a new documentation system. It's
+00:02:01.680 beautiful. And what I'm finding here
+00:02:04.280 is the
+00:02:06.200 AI, it can use the documentation. you
+00:02:09.199 know, I send it to the task
+00:02:11.480 orchestrators and they go and they look
+00:02:14.000 through and they get everything they
+00:02:15.360 need to feed really good contextual
+00:02:17.200 information to the workers and that's
+00:02:20.160 amazing and the workers do a good job.
+00:02:22.640 Um, except the AI even with all of this
+00:02:25.200 documentation is still unable to really
+00:02:27.840 debug, right? And uh it's it's unable to
+00:02:31.680 make good structural changes or do
+00:02:34.560 structural things that it needs to do.
+00:02:37.200 it and just doesn't figure that stuff
+00:02:38.640 out and it takes a human. Um, but the
+00:02:40.959 good thing is is I found that just by
+00:02:42.560 reading through the documentation that's
+00:02:44.560 being created, I'm able to keep up and
+00:02:46.560 track and better solve these bugs at a
+00:02:49.280 much quicker rate with this
+00:02:51.680 documentation help. So, that's very
+00:02:53.599 nice, right? That's very, very nice. And
+00:02:57.200 but no, the AI is not going to take it
+00:02:59.200 from start to finish and uh no human in
+00:03:02.159 the loop comes in. Um, not yet. But
+00:03:05.599 maybe with the new system, I'm going
+00:03:07.120 tell you at the end. And
+00:03:09.640 then another thing is make sure you're
+00:03:12.239 giving good directions, right? I made
+00:03:14.400 the mistake of just telling AI just, you
+00:03:16.879 know, take this ontology, take this data
+00:03:19.200 set, plot all the nodes and
+00:03:20.840 relationships in a graph is basically
+00:03:23.440 what I said. Terrible idea. I needed to
+00:03:26.400 say something like these are the 50
+00:03:28.959 nodes and these are the hundred
+00:03:30.400 relationships that need to show up in
+00:03:32.159 the graph. Work towards that, right? And
+00:03:35.120 then
+00:03:35.879 that things worked out so much better
+00:03:38.159 when it started doing that. Right? So
+00:03:41.200 very precise telling it what to do in
+00:03:44.400 many cases. Have not necessarily
+00:03:46.799 precisely telling it what to do but have
+00:03:48.640 a end goal that the AI can reach that
+00:03:52.720 the AI can measure that it has actually
+00:03:55.440 accomplished that goal.
+00:03:59.000 Right? Because it can never measure
+00:04:02.159 best. Right? You always have to give it
+00:04:04.640 a measurement that it can work towards
+00:04:07.599 and it can actually verify, hey, I've
+00:04:09.760 reached this point and I have a goal
+00:04:11.519 that's obtainable by knowledge a
+00:04:14.000 computer can understand, right? That
+00:04:16.880 helps out a lot.
+00:04:20.680 And so what I came up with to try to
+00:04:25.360 help out here is I got this new agentic
+00:04:27.680 system. This is what I'm putting on my
+00:04:30.400 GitHub. All right. And I got rid of the
+00:04:32.960 head
+00:04:33.960 orchestrator and replaced them with a
+00:04:36.800 metagenesis
+00:04:38.280 orchestrator. And what this metagenesis
+00:04:40.880 orchestrator does is it is a prime
+00:04:43.440 evolutionary force for the swarm's
+00:04:47.160 artificial. And these are defined in rue
+00:04:49.919 modes. And the core purpose of this
+00:04:52.560 orchestrator is to continuously adapt
+00:04:55.440 and enhance the role definition and
+00:04:57.680 custom instructions of the room modes
+00:05:01.160 file utilizing the principles of
+00:05:03.960 autogenetic prompt metamaterials and
+00:05:06.960 conceptual proof carrying prompts. You
+00:05:10.000 know, hitting them with that PCP. You
+00:05:12.240 know what I'm
+00:05:13.960 saying? This stuff this stuff gets
+00:05:16.400 crazy. You know what I mean? This is
+00:05:18.160 going to be this is going to get really
+00:05:19.600 crazy. The AIS are going to be
+00:05:21.800 evolving and the meta agent Genesis
+00:05:25.759 orchestrator also has the ability to
+00:05:28.400 evolve
+00:05:31.400 itself and it's going to completely be
+00:05:34.400 evolving the room modes as it goes with
+00:05:37.120 full understanding of all the documents,
+00:05:39.199 all the signals, the pheromone file and
+00:05:41.600 everything that's happened. And it's
+00:05:43.280 going to know everything that has
+00:05:44.639 happened and everything that needs to
+00:05:46.479 happen. And then it is going to evolve
+00:05:49.360 all of the agents to best reach that end
+00:05:52.600 goal. And that is how it is supposed to
+00:05:58.120 work. But who knows, you know, I might
+00:06:02.240 go to sleep with my agentic system
+00:06:04.880 running and wake up and realize it just
+00:06:08.080 evolved itself into a system that like
+00:06:10.720 hacks banks. You know, I don't know. You
+00:06:13.199 know, I might wake up and have the cops
+00:06:15.759 kicking down my door one day. You know,
+00:06:17.600 I don't know what the Metagenesis agent
+00:06:19.600 is going to
+00:06:23.240 do, but, you know, I do have it on my
+00:06:27.120 GitHub. I just, you know, play with it
+00:06:29.039 at your own peril, you know, and uh have
+00:06:33.199 fun vibe coding with this one, my
+00:06:35.120 friends.
