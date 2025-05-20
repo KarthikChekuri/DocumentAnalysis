@@ -1,6 +1,7 @@
 from arg_parse import parse_arguments
 from constants import WORD_BLACKLIST
 from llm import analyse_transcript
+from output_format import format_as_str, format_as_json, format_as_markdown
 
 def read_transcript(file_path):
     with open(file_path, 'r') as file:
@@ -32,12 +33,22 @@ print_message(message)
 # Analyze the transcript and print the results
 word_frequency = count_word_frequency(message)
 analysis = analyse_transcript(message, word_frequency)
-print("\nTranscript Analysis:")
-print(f"Quick Summary: {analysis.quick_summary}")
-print("Bullet Point Highlights:")
-for highlight in analysis.bullet_point_highlights:
-    print(f"- {highlight}")
-print(f"Sentiment Analysis: {analysis.sentiment_analysis}")
-print("Keywords:")
-for keyword in analysis.keywords:
-    print(f"- {keyword}")
+# Determine the output format and file extension
+output_format = args.output_format
+if output_format == 'json':
+    format_function = format_as_json
+    file_extension = 'json'
+elif output_format == 'markdown':
+    format_function = format_as_markdown
+    file_extension = 'md'
+else:
+    format_function = format_as_str
+    file_extension = 'txt'
+
+# Save the formatted analysis to a file
+formatted_analysis = format_function(analysis)
+output_file_path = f"transcript_analysis.{file_extension}"
+with open(output_file_path, 'w') as output_file:
+    output_file.write(formatted_analysis)
+
+print(f"\nTranscript analysis saved to {output_file_path}")
