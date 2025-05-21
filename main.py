@@ -9,6 +9,7 @@ def read_transcript(file_path):
         return file.read()
 
 args = parse_arguments()
+args.min_count = args.min_count or 10  # Set default min_count to 10 if not provided
 transcript_path = args.transcript_file
 def count_word_frequency(text):
     words = [word.strip('.,!?').lower() for word in text.split() if word.strip('.,!?').lower() not in WORD_BLACKLIST]
@@ -26,14 +27,14 @@ def count_word_frequency(text):
 def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
-    word_count_bar_chart(word_frequency)
 message = read_transcript(transcript_path)
 print_message(message)
 
 # Analyze the transcript and print the results
 word_frequency = count_word_frequency(message)
 analysis = analyse_transcript(message, word_frequency)
-# Determine the output format and file extension
+# Display the word count bar chart
+word_count_bar_chart(word_frequency)
 format_function = {
     'json': format_as_json,
     'markdown': format_as_markdown,
