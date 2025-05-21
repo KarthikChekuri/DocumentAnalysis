@@ -2,7 +2,7 @@ from arg_parse import parse_arguments
 from constants import WORD_BLACKLIST
 from llm import analyse_transcript
 from output_format import format_as_str, format_as_json, format_as_markdown
-from chat import word_count_bar_chart
+from chart import word_count_bar_chart
 
 def read_transcript(file_path):
     with open(file_path, 'r') as file:
@@ -18,17 +18,15 @@ def count_word_frequency(text):
             frequency[word] += 1
         else:
             frequency[word] = 1
-    return frequency
+    # Filter words based on the minimum count threshold
+    threshold_word_frequency = {word: count for word, count in frequency.items() if count > args.min_count}
+    return threshold_word_frequency
 
 
 def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
-    # Filter words based on the minimum count threshold
-    threshold_word_frequency = {word: count for word, count in word_frequency.items() if count > args.min_count}
-    
-    # Display the word count bar chart
-    word_count_bar_chart(threshold_word_frequency)
+    word_count_bar_chart(word_frequency)
 message = read_transcript(transcript_path)
 print_message(message)
 
