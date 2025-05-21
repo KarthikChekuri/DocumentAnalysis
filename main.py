@@ -27,14 +27,18 @@ def count_word_frequency(text):
 def print_message(msg):
     print(msg)
     word_frequency = count_word_frequency(msg)
+    # Filter words based on the minimum count threshold
+    threshold_word_frequency = {word: count for word, count in word_frequency.items() if count > args.min_count}
+    
+    # Display the word count bar chart
+    word_count_bar_chart(threshold_word_frequency)
 message = read_transcript(transcript_path)
 print_message(message)
 
 # Analyze the transcript and print the results
 word_frequency = count_word_frequency(message)
 analysis = analyse_transcript(message, word_frequency)
-# Display the word count bar chart
-word_count_bar_chart(word_frequency)
+# Determine the output format and file extension
 format_function = {
     'json': format_as_json,
     'markdown': format_as_markdown,
