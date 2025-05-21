@@ -1,5 +1,6 @@
 from data_types import TranscriptAnalysis
 import json
+import yaml
 
 def format_as_str(transcript: TranscriptAnalysis) -> str:
     output = []
@@ -15,6 +16,9 @@ def format_as_str(transcript: TranscriptAnalysis) -> str:
 
 def format_as_json(transcript: TranscriptAnalysis) -> str:
     return json.dumps(transcript.dict(), indent=4)
+
+def format_as_yaml(transcript: TranscriptAnalysis) -> str:
+    return yaml.dump(transcript.dict(), default_flow_style=False)
 
 def format_as_markdown(transcript: TranscriptAnalysis) -> str:
     output = []

@@ -1,7 +1,7 @@
 from arg_parse import parse_arguments
 from constants import WORD_BLACKLIST
 from llm import analyse_transcript
-from output_format import format_as_str, format_as_json, format_as_markdown
+from output_format import format_as_str, format_as_json, format_as_markdown, format_as_yaml
 from chart import word_count_bar_chart
 
 def read_transcript(file_path):
@@ -42,13 +42,15 @@ analysis = analyse_transcript(message, word_frequency)
 format_function = {
     'json': format_as_json,
     'markdown': format_as_markdown,
-    'text': format_as_str
+    'text': format_as_str,
+    'yaml': format_as_yaml
 }.get(args.output_format, format_as_str)
 
 file_extension = {
     'json': 'json',
     'markdown': 'md',
-    'text': 'txt'
+    'text': 'txt',
+    'yaml': 'yaml'
 }.get(args.output_format, 'txt')
 
 # Save the formatted analysis to a file
